@@ -1,15 +1,15 @@
 - name: Create the ELB only listening over port 88 
-	ec2_elb_lb: 
-		name: (( ELBNAME }}" 
-		state: present 
-		region: us-east-2 
-		zones: 
-		- us-east-2a 
-		- us-east-2b 
-		listeners: 
-		- protocol: http 
-		laad balancer_port: 80 
-		instance port: 80 
+  ec2_elb_lb: 
+    name: (( ELBNAME }}" 
+    state: present 
+    region: us-east-2 
+    zones: 
+    - us-east-2a 
+    - us-east-2b 
+    listeners: 
+    - protocol: http 
+    laad balancer_port: 80 
+    instance port: 80 
 	register: elb 
 
 - name: Create EC2 instances 
