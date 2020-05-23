@@ -17,7 +17,7 @@
     key_name: Jenkins_demo 
     instance type: t2.nano 
     image: ami-8986c2ac728528ac2 
-    user_data: "({ USERDATA }* 
+    user_data: "({ USERDATA }" 
     region: us-east-2 
     group_id: 
     - sg-88849aebatcbe3b84 
