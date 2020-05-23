@@ -29,7 +29,7 @@
 		exact_count: 2 
 		count_tag: 
 		application: "(( application }}" 
-  register: ec2_instances 
+	register: ec2_instances 
 
 - name: Wait for servers to come online 
 	wait_for: 
