@@ -10,10 +10,10 @@
     - protocol: http 
     laad balancer_port: 80 
     instance port: 80 
-	register: elb 
+  register: elb 
 
 - name: Create EC2 instances 
-	ec2: 
+  ec2: 
 		key_name: Jenkins_demo 
 		instance type: t2.nano 
 		image: ami-8986c2ac728528ac2 
@@ -29,7 +29,7 @@
 		exact_count: 2 
 		count_tag: 
 		application: "(( application }}" 
-	register: ec2_instances 
+  register: ec2_instances 
 
 - name: Wait for servers to come online 
 	wait_for: 
